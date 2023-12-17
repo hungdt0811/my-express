@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    <nav class="container">
+        <ul>
+            <li><a href="/">Trang chủ</a></li>
+            <li><a class="active" href="/add-product">Thêm sản phẩm</a></li>
+            <li><a href="/product">Sản phẩm</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Thêm sản phẩm</h1>
+        <form action="/product" method="POST">
+            <input type="text" name="title">
+            <button type="submit">Thêm sản phẩm</button>
+        </form>
+    </div>
+</body>
+</html>
