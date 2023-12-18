@@ -18,7 +18,8 @@ app.use(postRes.router);
 app.use(mainRq);
 
 app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(rootNode, 'views', '404.html'))
+    // res.status(404).sendFile(path.join(rootNode, 'views', '404.html'));
+    res.render('404', {title: "Không tìm thấy trang"});
 })
 app.listen(3000, () => {
     console.log("Server is running at http://localhost:3000");

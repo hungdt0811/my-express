@@ -7,7 +7,7 @@ const products = [];    // tao array luu du lieu
 
 router.post('/product', (req, res, next) => {
     products.push({title: req.body.title});
-    res.redirect('/');  // dieu huong ve trang chu
+    res.redirect('/product');  // dieu huong ve trang chu
 })
 
 exports.router = router;

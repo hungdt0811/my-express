@@ -1,27 +1,19 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title #{title}
-        link(rel="stylesheet", href="/css/style.css")
-    body 
-        nav.container
-            ul
-                li 
-                    a(href="/") Trang chủ 
-                li 
-                    a(href="/add-product") Thêm sản phẩm
-                li 
-                    a.active(href="/product") Sản phẩm 
-        .container 
-            h1 Danh sách sản phẩm
+extends layouts/main-layout.pug
+
+block body
+    .container 
+        h1 Danh sách sản phẩm
+            if data.length > 0
                 table
                     thead 
                         th STT
                         th Tên sản phẩm
                     tbody 
-                        each product in data
+                        each product, i in data
                             tr
-                                td 0
+                                td.stt #{i + 1}
                                 td #{product.title}
+            else 
+                h1 Không có sản phẩm nào
+
+        
