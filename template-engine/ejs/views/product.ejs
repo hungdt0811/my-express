@@ -1,0 +1,30 @@
+<%- include('layouts/partials/head.ejs') %>
+
+<body>
+    <header>
+        <%- include('layouts/partials/navigation.ejs') %>
+    </header>
+    <div class="container">
+        <h1>Danh sách sản phẩm</h1>
+        <% if(data.length > 0) { %>
+            <table>
+                <thead>
+                    <th>STT</th>
+                    <th>Tên sản phẩm</th>
+                </thead>
+                <tbody>
+                    <% for (var i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td class="stt"><%= (i + 1) %></td>
+                            <td><%= data[i].title %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <h2>Không có sản phẩm nào</h2>
+        <% } %>
+    </div>
+</body>
+
+</html>

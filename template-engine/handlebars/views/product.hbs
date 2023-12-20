@@ -1,0 +1,20 @@
+<h1>Shop page</h1>
+{{#if hasProduct }}
+    <table>
+        <thead>
+            <th>STT</th>
+            <th>Tên sản phẩm</th>
+        </thead>
+        <tbody>
+            {{#each data }}
+            <tr>
+                <td class="stt">{{ index }}</td>
+                <td>{{ title }}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{ else }}
+    <h2>Không có sản phẩm nào</h2>
+{{/if}}
+
