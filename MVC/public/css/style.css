@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: rgb(18, 76, 138);
+    font-weight: 900;
+}
+
+nav {
+    background-color: bisque;
+    padding: 20px 50px;
+}
+
+ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    transition: all ease-in .5s;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.active {
+    color: rgb(255, 0, 0);
+}
+
+

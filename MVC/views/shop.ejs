@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <%- include('./layouts/partials/navigation.ejs') %>
+    </header>
+    <h1>Shop page</h1>
+    <table>
+        <% if(products.length> 0 ) { %>
+            <thead>
+                <th>STT</th>
+                <th>Product</th>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i < products.length; i++) { %>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td><%= products[i].product_name %></td>        
+                </tr>
+                <% } %>
+            </tbody>
+        <% } else { %>
+            <p>No product found!</p>
+        <% } %>
+        </table>
+</body>
+
+</html>
