@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <div class="container">
+            <header>
+                <%- include('../partials/navigation.ejs') %>
+            </header>
+            <div class="body-page">
+                <h1>Danh sách sản phẩm</h1>
+                <% if (products.length> 0) { %>
+                    <div class="product-list-area">
+                        <div class="product-list">
+                            <% for(var i = 0; i < products.length; i++) { %>
+                                <div class="product">
+                                    <h3>
+                                        <%= products[i].name %>
+                                    </h3>
+                                    <img src="" alt="">
+                                    <p>Giá: <span>
+                                                <%= products[i].price %> $
+                                            </span>
+                                    </p>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                <% } else { %>
+                <h2>Không có sản phẩm nào được tìm thấy...</h2>
+                <% } %>
+            </div>
+        </div>
+    </body>
+
+</html>

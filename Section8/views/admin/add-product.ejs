@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <div class="container">
+        <header>
+            <%- include('../partials/navigation.ejs') %>
+        </header>
+        <div class="body-page">
+            <h1>Thêm sản phẩm</h1>
+            <form action="/shop" method="POST">
+                <div class="item">
+                    <label for="title">Product Name: </label>
+                    <div class="input-area">
+                        <input type="text" name="title">
+                    </div>
+                </div>
+                <div class="item">
+                    <label for="imageUrl">Image URL: </label>
+                    <div class="input-area">
+                        <input type="number" name="imageUrl">
+                    </div>
+                </div>
+                <div class="item">
+                    <label for="description">Description: </label>
+                    <div class="input-area">
+                        <textarea name="description" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="item">
+                    <label for="price">Giá sản phẩm: </label>
+                    <div class="input-area">
+                        <input type="number" name="price">
+                    </div>
+                </div>
+                <button type="submit">Thêm sản phẩm</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
