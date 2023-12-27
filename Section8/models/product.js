@@ -8,7 +8,7 @@ let products = [];
 module.exports = class Product {
     constructor(name, imageUrl, description , price) { 
         this.name = name;
-        this.image = imageUrl;
+        this.imageUrl = imageUrl;
         this.description = description;
         this.price = price;
     }
@@ -28,6 +28,7 @@ module.exports = class Product {
                 console.log(err);
             })
         })
+        console.log('test');
     }
 
     static fetchAll(cb) {

@@ -17,11 +17,14 @@
                                     <h3>
                                         <%= products[i].name %>
                                     </h3>
-                                    <img src="" alt="">
-                                    <p>Giá: <span>
-                                                <%= products[i].price %> $
+                                    <img src="<%= products[i].imageUrl %>" alt="<%= products[i].name %>">
+                                    <h4><%= products[i].description %></h4>
+                                    <p>Price: <span>
+                                                <%= products[i].price %> 
                                             </span>
+                                            $
                                     </p>
+                                    <button>Add to cart</button>
                                 </div>
                             <% } %>
                         </div>

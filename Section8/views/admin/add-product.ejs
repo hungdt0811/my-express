@@ -8,7 +8,7 @@
         </header>
         <div class="body-page">
             <h1>Thêm sản phẩm</h1>
-            <form action="/shop" method="POST">
+            <form action="/admin/add-product" method="POST">
                 <div class="item">
                     <label for="title">Product Name: </label>
                     <div class="input-area">
@@ -18,7 +18,7 @@
                 <div class="item">
                     <label for="imageUrl">Image URL: </label>
                     <div class="input-area">
-                        <input type="number" name="imageUrl">
+                        <input type="text" name="imageUrl">
                     </div>
                 </div>
                 <div class="item">
@@ -33,7 +33,7 @@
                         <input type="number" name="price">
                     </div>
                 </div>
-                <button type="submit">Thêm sản phẩm</button>
+                <button type="submit">Add product</button>
             </form>
         </div>
     </div>

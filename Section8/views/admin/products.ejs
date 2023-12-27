@@ -9,7 +9,32 @@
             </header>
             <div class="body-page">
                 <h1>Admin Product</h1>
-                
+                <% if (products.length> 0) { %>
+                    <div class="product-list-area">
+                        <div class="product-list">
+                            <% for(var i = 0; i < products.length; i++) { %>
+                                <div class="product">
+                                    <h3>
+                                        <%= products[i].name %>
+                                    </h3>
+                                    <img src="<%= products[i].imageUrl %>" alt="<%= products[i].name %>">
+                                    <h4><%= products[i].description %></h4>
+                                    <p>Price: <span>
+                                                <%= products[i].price %> 
+                                            </span>
+                                            $
+                                    </p>
+                                    <div class="admin-option">
+                                        <a class="edit-btn" href="/admin/edit-product">Edit</a>
+                                        <a class="delete-btn" href="">Delete</a>
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+                <% } else { %>
+                <h2>Không có sản phẩm nào được tìm thấy...</h2>
+                <% } %>
             </div>
         </div>
     </body>
